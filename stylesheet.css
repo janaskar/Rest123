@@ -18,7 +18,9 @@
 ::-webkit-scrollbar{
     display: none;
 }
-
+#btn1, #btn2{
+    display: none;
+}
 
 
 /* min-width: 899px */
@@ -66,7 +68,7 @@ header{
 #logo{
     font-size: 2.5rem;
 }
-.info{
+.small{
     padding-left: 1rem;
 }
 nav{
@@ -94,6 +96,15 @@ nav{
     border: 0;
     padding: 2rem;
 }
+section{
+    overflow: auto;
+    padding-top: 4rem;
+    padding-left: 15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: var(--bg-secondary);
+}
 }
 
 
@@ -104,21 +115,47 @@ nav{
 
 @media only screen and (max-width: 1000px){
 header{
-    background-color: var(--text-secondary);
+    z-index: 2;
+    padding-bottom: .5rem;
+    position: fixed;
+    bottom: 0;
     height: 4rem;
+    width: 100vw;
+}
+.head, label{
+    height: 3.8rem;
+    width: 3.8rem;
+    display: flex;
+    background-color: var(--bg-fixed);
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 50%;
 }
 .container{
     padding: 0 1rem;
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
+}
+#menuIndex{
+    display: none;
 }
 .text, #map{
     display: none;
 }
 .container a{
     font-size: 3rem;
+}
+.clock, .menu{
+    cursor: pointer;
+}
+section{
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: var(--bg-fixed);
 }
 }
 
@@ -128,18 +165,6 @@ header{
 
 
 
-section{
-    overflow: auto;
-    padding-top: 4rem;
-    padding-left: 15rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background: var(--bg-secondary);
-}
-article{
-    background-color: none;
-}
 .courses{
     display: flex;
     flex-direction: column;
@@ -154,6 +179,13 @@ article{
         opacity: 1.0;
       }*/
 }
+
+img{
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+
 #starters {
     background-color: purple;
     display: flex;
@@ -165,6 +197,14 @@ article{
     line-height: 100px; 
     /*image height: 100hv;
     image width: 100vw;*/
+}
+
+/*lite proble nå*/
+.beskbilde {
+    display: flex;
+
+
+
 }
 
 #lunch{
