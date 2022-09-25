@@ -5,22 +5,20 @@
     outline: 0;
     text-decoration: none;
     color: white;
-    animation-duration: 200ms;
 }
 :root{
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
     --bg-fixed: #28282b;
     --bg-secondary: linear-gradient(DodgerBlue, darkblue);
+    --bg-footer: #000030;
     --text-primary: aliceblue;
     --text-secondary: cadetblue;
 }
-::-webkit-scrollbar{
+::-webkit-scrollbar, #btn1, #btn2{
     display: none;
 }
-#btn1, #btn2{
-    display: none;
-}
+
 
 
 /* min-width: 899px */
@@ -29,7 +27,6 @@
 
 @media only screen and (min-width: 999px){
 header{
-    z-index: 2;
     position: fixed;
     height: 4rem;
     width: 100vw;
@@ -62,7 +59,7 @@ header{
     justify-content: flex-end;
     font-size: 1.3rem;
 }
-.div0, .div4{
+.div0, .div4, .time{
     display: none;
 }
 #logo{
@@ -72,15 +69,13 @@ header{
     padding-left: 1rem;
 }
 nav{
-    z-index: 1;
-    margin: 4rem 0;
     position: fixed;
     float: left;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 15rem;
-    height: calc(100vh - 4rem);
+    height: 100%;
     background-color: var(--bg-fixed);
 }
 #menuIndex{
@@ -115,14 +110,13 @@ section{
 
 @media only screen and (max-width: 1000px){
 header{
-    z-index: 2;
     padding-bottom: .5rem;
     position: fixed;
     bottom: 0;
     height: 4rem;
     width: 100vw;
 }
-.head, label{
+.head{
     height: 3.8rem;
     width: 3.8rem;
     display: flex;
@@ -132,30 +126,74 @@ header{
     border-radius: 50%;
 }
 .container{
-    padding: 0 1rem;
+    padding: 0 .3rem;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
-#menuIndex{
-    display: none;
-}
-.text, #map{
-    display: none;
-}
 .container a{
     font-size: 3rem;
 }
+.text, #map, .time{
+    display: none;
+}
 .clock, .menu{
     cursor: pointer;
+}
+#btn2:checked ~ .time{
+    position: fixed;
+    height: 1rem;
+    width: 100%;
+    bottom: 6.5rem;
+    display: flex;
+    justify-content: center;
+}
+#btn2:checked ~ .time:after{
+	content: '';
+    margin-left: -.69rem;
+	position: fixed;
+	bottom: 5.5rem;
+	left: 50%;
+	border: .7rem solid transparent;
+	border-top-color: var(--bg-fixed);
+	border-bottom: 0;
+}
+.time p{
+    height: 1rem;
+    width: 10.3rem;
+    background-color: var(--bg-fixed);
+    border-radius: .5rem;
+    padding: .25rem;
+}
+#btn1:checked ~ nav{
+    z-index: -1;
+    padding-bottom: 4rem;
+    position: fixed;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    bottom: 0;
+    background-color: var(--bg-fixed);
+    transition: all .5s ease-in-out;
+}
+#menuIndex{
+    padding: 2rem;
+    height: 15rem;
+    list-style: none;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 section{
     overflow: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background: var(--bg-fixed);
+    background: var(--bg-secondary);
 }
 }
 
@@ -164,6 +202,14 @@ section{
 /* Content */
 
 
+
+article{
+    background-image: url(/img/bg.svg);
+    Background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100%;
+    padding-bottom: 22rem;
+}
 
 .courses{
     display: flex;
@@ -187,7 +233,7 @@ img{
 }
 
 #starters {
-    background-color: purple;
+    xbackground-color: purple;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -208,7 +254,7 @@ img{
 }
 
 #lunch{
-    background-color: gray;
+    xbackground-color: gray;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -219,7 +265,7 @@ img{
 }
 
 #main{
-    background-color: gray;
+    xbackground-color: gray;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -231,7 +277,7 @@ img{
 
 #dessert
 {
-    background-color: gold;
+    xbackground-color: gold;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -243,7 +289,7 @@ img{
 
 
 #beverages
-{background-color: red;
+{xbackground-color: red;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -253,13 +299,8 @@ img{
     line-height: 100px; }
 
 footer{
-    padding: 4rem;
+    border: 1px;
+    padding-bottom: 5rem;
     text-align: center;
-    background-color: darkblue;
+    background-color: var(--bg-footer);
 }
-footer p{
-    color: var(--text-secondary);
-}
-
-
-
