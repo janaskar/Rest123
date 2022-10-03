@@ -20,7 +20,6 @@
 }
 
 
-
 /* min-width: 899px */
 
 
@@ -75,7 +74,7 @@ nav{
     flex-direction: column;
     justify-content: space-between;
     width: 15rem;
-    height: 100%;
+    height: calc(100% - 4rem);
     background-color: var(--bg-fixed);
 }
 #menuIndex{
@@ -90,6 +89,7 @@ nav{
 #map{
     border: 0;
     padding: 2rem;
+    border-radius:3rem;
 }
 section{
     overflow: auto;
@@ -208,98 +208,53 @@ article{
     Background-repeat: no-repeat;
     background-position: bottom;
     background-size: 100%;
-    padding-bottom: 22rem;
-}
-
-.courses{
+    padding-bottom: 5rem;
     display: flex;
     flex-direction: column;
+}
+
+.mainMenu{
+    padding: 1rem;
+    text-align: center;
+    border-bottom:#28282b 0.2rem solid;
+    border-radius: 3rem;
+}
+.bevMenu{
+    padding: 1rem;
+    text-align: center;
+}
+.item{
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+}
+.itemAtt{
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
-
-    /* bilde
-    img {
-        opacity: 0.5;
-      }
-      
-      img:hover {
-        opacity: 1.0;
-      }*/
+    width: 100%;
+    padding: 1rem;
+    /*background-color: aliceblue;
+    opacity: 0.5;*/
+    border: white 0.2rem solid;
+    border-radius: 1rem;
 }
-
-img{
-    max-width: 100%;
-    max-height: 100%;
-    display: block;
+.itemAtt > p{
+    justify-content: right;
+    padding-top: 3.6%;
 }
-
-#starters {
-    xbackground-color: purple;
+.itemDesc{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    vertical-align: middle;
-    line-height: 100px; 
-    /*image height: 100hv;
-    image width: 100vw;*/
+    width: 90%;
 }
-
-/*lite proble nå*/
-.beskbilde {
-    display: flex;
-
-
-
+img {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 1rem;
 }
-
-#lunch{
-    xbackground-color: gray;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    vertical-align: middle;
-    line-height: 100px; 
-}
-
-#main{
-    xbackground-color: gray;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    vertical-align: middle;
-    line-height: 100px; 
-}
-
-#dessert
-{
-    xbackground-color: gold;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    vertical-align: middle;
-    line-height: 100px; 
-}
-
-
-#beverages
-{xbackground-color: red;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    vertical-align: middle;
-    line-height: 100px; }
 
 footer{
-    border: 1px;
     padding-bottom: 5rem;
     text-align: center;
     background-color: var(--bg-footer);
